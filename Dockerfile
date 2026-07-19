@@ -1,7 +1,7 @@
 # =====================================================
-# Worker Napoleon — Node 20 + FFmpeg + Poppler + Tesseract
+# Worker Napoleon — Node 22 + FFmpeg + Poppler + Tesseract
 # =====================================================
-FROM node:20-bookworm-slim AS build
+FROM node:22-bookworm-slim AS build
 
 WORKDIR /app
 COPY package*.json ./
@@ -11,7 +11,7 @@ COPY src ./src
 RUN npm run build
 
 # =====================================================
-FROM node:20-bookworm-slim AS runtime
+FROM node:22-bookworm-slim AS runtime
 
 # Ferramentas de sistema usadas pelo pipeline:
 # - ffmpeg/ffprobe: áudio (normalização, chunks)

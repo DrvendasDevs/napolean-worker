@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Worker assíncrono do pipeline de avaliação comercial Napoleon (transcrição, OCR, RAG, avaliação, PDFs, entrega WhatsApp).",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "tsx watch src/index.ts",
